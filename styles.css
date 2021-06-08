@@ -15,7 +15,7 @@ div:first-child {
     padding-top: 0.8em;
     margin: auto;
     margin-top: 6em;
-    box-shadow: 0 0 20px lightblue;
+    box-shadow: 0 10px 50px lightblue;
     border-radius: 8px;
 }
 
@@ -84,4 +84,28 @@ input[type="button"]:active {
     font-size: 25px;
     padding-bottom: 0;
     font-family: Inter, sans-serif;
+}
+
+.clear {
+    border: none;
+    background-color: transparent;
+    font-family: Inter;
+    letter-spacing: 1px;
+    color: dodgerblue;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 5px;
+    width: 5em;
+    transition: 100ms ease-in;
+}
+
+.clear:hover {
+    background: rgba(30, 143, 255, 0.753);
+    color: white;
+    cursor: pointer;
+}
+
+.clear:focus {
+    background: dodgerblue;
+    color: white;
 }
