@@ -1,0 +1,87 @@
+:root {
+    --primary: white;
+    --background: dodgerblue;
+    --borders: white;
+}
+
+body {
+    background-color: var(--background);
+}
+
+div:first-child {
+    background-color: white;
+    width: 280px;
+    padding-right: 12px;
+    padding-top: 0.8em;
+    margin: auto;
+    margin-top: 6em;
+    box-shadow: 0 0 20px lightblue;
+    border-radius: 8px;
+}
+
+div:last-child {
+    display: grid;
+    max-width: 15em;
+    padding-top: 0.5em;
+    grid-template-columns: auto auto auto auto;
+}
+
+input[type="button"] {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    padding: 1.5rem 1.8rem;
+    border: 0.5px solid var(--borders);
+    background: var(--primary);
+    transition: 100ms ease-in;
+    border-radius: 5px;
+}
+
+input[type="button"]:active {
+    background: dodgerblue;
+    color: white;
+}
+
+.grey {
+    color: rgb(116, 116, 116);
+    font-size: 20px;
+}
+
+.equals {
+    background-color: dodgerblue;
+    color: var(--primary);
+    border-radius: 50%;
+    padding: 0;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    right: -0.3rem;
+    top: 0.9rem;
+    box-shadow: 0 0 15px dodgerblue;
+    border: none;
+    transition: 100ms ease-in;
+}
+
+.equals:active {
+    color: black;
+    background-color: lightblue;
+}
+
+.input {
+    font-size: 20px;
+    padding: 10px;
+    width: 91%;
+    border: none;
+    outline: none;
+    position: relative;
+    top: -10px;
+    font-family: Inter, sans-serif;
+    pointer-events: none;
+    text-align: right;
+}
+
+.answer {
+    float: right;
+    font-size: 25px;
+    padding-bottom: 0;
+    font-family: Inter, sans-serif;
+}
