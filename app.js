@@ -49,6 +49,9 @@ for (i = 0; i < operatorButtons.length; i++) {
 document.querySelector('button.clear').addEventListener('click', function() {
     input.value = null;
     ans.innerHTML = "∞";
+    for (i = 0; i < operatorButtons.length; i++) {
+        operatorButtons[i].disabled = true;
+    }
 })
 
 decimal.addEventListener('click', function() {
