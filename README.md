@@ -4,4 +4,4 @@
 
 Its hosted live with Github pages at, 
 
-[Awesome Calculator](poornaka.github.io/awesome-calculator)
+[Awesome Calculator](https://poornaka.github.io/awesome-calculator)
