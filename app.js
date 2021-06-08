@@ -22,14 +22,14 @@ function assign(value) {
             getAnswer(input.value);
         }
     } catch (e) {
-        console.log(e.message);
+        return null;
     }
 }
 
+let ans = document.querySelector('p');
 function getAnswer(v, a) {
     let result = eval(v);
-    let equals = document.querySelector('button');
-    let ans = document.querySelector('p');
+    let equals = document.querySelector('button.equals');
     equals.addEventListener('click', function() {
         ans.innerHTML = result;
     });
@@ -40,6 +40,9 @@ var i;
 for (i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function () {
         assign(this.value);
+        for (i = 0; i < operatorButtons.length; i++) {
+            operatorButtons[i].disabled = false;
+        }
     });
 };
 
@@ -51,10 +54,17 @@ for (i = 0; i < operatorButtons.length; i++) {
     });
 };
 
+document.querySelector('button.clear').addEventListener('click', function() {
+    input.value = null;
+    ans.innerHTML = "∞";
+})
+
 decimal.addEventListener('click', function() {
     decimal.disabled = true;
 });
 
 if (input.value.length == 0) {
-    operatorButtons.disabled = true;
+    for (i = 0; i < operatorButtons.length; i++) {
+        operatorButtons[i].disabled = true;
+    }
 }
